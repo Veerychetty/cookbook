@@ -1,0 +1,158 @@
+/* Base styles - Lightweight */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container - Simplified */
+.cooking-universe {
+  min-height: 100vh;
+  color: white;
+  background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+  position: relative;
+}
+
+/* Simplified ambient effect */
+.cooking-universe__ambient-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.15) 0%, transparent 25%),
+    radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.15) 0%, transparent 25%);
+  opacity: 0.8;
+}
+
+/* Content layout */
+.cooking-universe__content {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Hero section - Optimized */
+.cooking-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.cooking-hero__wrapper {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.cooking-hero__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.cooking-hero__subtitle {
+  font-size: 1rem;
+  color: #e5e7eb;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.cooking-hero__cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(to right, #10b981, #3b82f6);
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.cooking-hero__cta:hover {
+  transform: scale(1.05);
+}
+
+/* Features section - Lightweight */
+.cooking-features {
+  padding: 2rem 0;
+}
+
+.cooking-features__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cooking-features__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.cooking-feature-card {
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.cooking-feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.cooking-feature-card__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #34d399;
+  margin-bottom: 0.75rem;
+}
+
+.cooking-feature-card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cooking-feature-card__text {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .cooking-hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .cooking-hero__subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .cooking-features__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .cooking-features__title {
+    font-size: 2rem;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

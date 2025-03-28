@@ -1,0 +1,47 @@
+/* 📌 Fixed Web Button Styling */
+.web-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem; /* Smaller padding for mobile */
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(to right, rgb(16, 185, 129), rgb(59, 130, 246));
+    border: none;
+    border-radius: 9999px;
+    z-index: 999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 📌 Icon Styling */
+  .btn-icon {
+    margin-right: 8px;
+  }
+  
+  /* 📌 Hover & Click Effects */
+  .web-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, rgb(13, 148, 106), rgb(37, 99, 235));
+  }
+  
+  .web-btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* 📌 Responsive Design */
+  @media (max-width: 600px) {
+    .web-btn {
+      bottom: 15px;
+      left: 15px;
+      font-size: 0.9rem;
+      padding: 0.4rem 1.2rem;
+    }
+  }
+  
